@@ -1,0 +1,10 @@
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\DataAccessLayer\DataAccessLayer_Tests\obj\Debug\DbDataAccessLayer_Tests.csprojResolveAssemblyReference.cache
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\DataAccessLayer\DataAccessLayer_Tests\obj\Debug\DataAccessLayer_Tests.dll
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\DataAccessLayer\DataAccessLayer_Tests\obj\Debug\DataAccessLayer_Tests.pdb
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\DataAccessLayer\DataAccessLayer_Tests\bin\Debug\DataAccessLayer_Tests.dll
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\DataAccessLayer\DataAccessLayer_Tests\bin\Debug\DataAccessLayer_Tests.pdb
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\DataAccessLayer\DataAccessLayer_Tests\bin\Debug\DataAccessLayer.dll
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\DataAccessLayer\DataAccessLayer_Tests\bin\Debug\nunit.framework.dll
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\DataAccessLayer\DataAccessLayer_Tests\bin\Debug\nunit.mocks.dll
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\DataAccessLayer\DataAccessLayer_Tests\bin\Debug\DataAccessLayer.pdb
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\DataAccessLayer\DataAccessLayer_Tests\bin\Debug\nunit.framework.xml

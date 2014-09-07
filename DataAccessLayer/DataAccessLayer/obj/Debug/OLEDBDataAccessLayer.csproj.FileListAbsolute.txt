@@ -1,0 +1,5 @@
+c:\users\robert\documents\visual studio 2013\Projects\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+c:\users\robert\documents\visual studio 2013\Projects\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+c:\users\robert\documents\visual studio 2013\Projects\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+c:\users\robert\documents\visual studio 2013\Projects\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\DataAccessLayer\DataAccessLayer\obj\Debug\OleDbDataAccessLayer.csprojResolveAssemblyReference.cache

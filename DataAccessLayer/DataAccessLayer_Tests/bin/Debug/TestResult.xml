@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\Robert\Documents\Visual Studio 2013\Projects\DataAccessLayer\DataAccessLayer_Tests\bin\Debug\DataAccessLayer_Tests.dll" total="1" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-09-07" time="07:59:22">
+  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.5483" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="ROBERT-PC" user="Robert" user-domain="Robert-PC" />
+  <culture-info current-culture="en-AU" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\Robert\Documents\Visual Studio 2013\Projects\DataAccessLayer\DataAccessLayer_Tests\bin\Debug\DataAccessLayer_Tests.dll" executed="True" result="Failure" success="False" time="0.558" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="DbDataAccessLayer_Tests" executed="True" result="Failure" success="False" time="0.543" asserts="0">
+        <results>
+          <test-suite type="TestFixture" name="CRUD_tests" executed="True" result="Failure" success="False" time="0.541" asserts="0">
+            <results>
+              <test-suite type="ParameterizedTest" name="SaveData_SaveDatasetToDatabase_OneRowAffected" executed="True" result="Failure" success="False" time="0.534" asserts="0">
+                <results>
+                  <test-case name="DbDataAccessLayer_Tests.CRUD_tests.SaveData_SaveDatasetToDatabase_OneRowAffected()" executed="True" result="Failure" success="False" time="0.528" asserts="1">
+                    <failure>
+                      <message><![CDATA[  Expected: 2
+  But was:  0
+]]></message>
+                      <stack-trace><![CDATA[at DbDataAccessLayer_Tests.CRUD_tests.SaveData_SaveDatasetToDatabase_OneRowAffected() in c:\Users\Robert\Documents\Visual Studio 2013\Projects\DataAccessLayer\DataAccessLayer_Tests\CRUD_tests.cs:line 68
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
