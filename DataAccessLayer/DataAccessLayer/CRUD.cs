@@ -69,7 +69,7 @@ namespace DataAccessLayer
         /// </returns>
         public DataTable GetDataTable(string pStrTableName)
         {
-            string strQuery = "SELECT * FROM [" + pStrTableName + "]";
+            string strQuery = String.Format("SELECT * FROM [{0}]",pStrTableName);
             return FillDataSet(_dataSet, strQuery, pStrTableName).Tables[pStrTableName];
         }
 
@@ -134,7 +134,7 @@ namespace DataAccessLayer
         public int SaveData(DataSet pDataSet, string pStrTableName)
         {
             int rowsAffected = 0;
-            string strQuery = "SELECT * FROM [" + pStrTableName + "]";
+            string strQuery = String.Format("SELECT * FROM [{0}]",pStrTableName);
 
             DbDataAdapter dbDa = _dataConnection.DbDataAdapter(strQuery, _dbConnection);
             try

@@ -6,14 +6,13 @@ using NUnit.Framework;
 namespace DbDataAccessLayer_Tests
 {
     [TestFixture]
-    internal class CRUD_tests
+    internal class CrudTests
     {
         [Test]
         public void GetDataTable_ReturnObject_NotNull()
         {
             var crud = new Crud(OleDbDataConnection.GetInstance());
-            var result = new DataTable();
-            result = crud.GetDataTable("TestTable");
+            DataTable result = crud.GetDataTable("TestTable");
             Assert.NotNull(result);
         }
 
@@ -28,52 +27,53 @@ namespace DbDataAccessLayer_Tests
         [Test]
         public void SaveData_SaveDatasetToDatabase_OneRowAffected()
         {
-            const string strQuery = "SELECT * FROM [dbo].[TestTable]";
-            const string TableName = "TestTable";
+            const string tableName = "TestTable";
+            string strQuery = String.Format("SELECT * FROM [{0}]", tableName);
             var crud = new Crud(OleDbDataConnection.GetInstance());
             var ds = new DataSet();
-            ds = crud.FillDataSet(ds, strQuery, TableName);
+            ds = crud.FillDataSet(ds, strQuery, tableName);
 
-            DataRow dr = ds.Tables[TableName].NewRow();
+            DataRow dr = ds.Tables[tableName].NewRow();
             dr["Name"] = "Fred";
             dr["Number"] = "046131";
             dr["Description"] = "This is a row added by the unit test";
 
-            ds.Tables[TableName].Rows.Add(dr);
-            int Result = crud.SaveData(ds, TableName);
-            Assert.AreEqual(1, Result);
+            ds.Tables[tableName].Rows.Add(dr);
+            int result = crud.SaveData(ds, tableName);
+            Assert.AreEqual(1, result);
         }
 
         [Test]
         public void SaveData_SaveDatasetToDatabase_TwoRowsAffected()
         {
-            const string strQuery = "SELECT * FROM [dbo].[TestTable]";
-            const string TableName = "TestTable";
+            const string tableName = "TestTable";
+            string strQuery = String.Format("SELECT * FROM [{0}]", tableName);
             var crud = new Crud(OleDbDataConnection.GetInstance());
             var ds = new DataSet();
-            ds = crud.FillDataSet(ds, strQuery, TableName);
+            ds = crud.FillDataSet(ds, strQuery, tableName);
 
-            DataRow dr = ds.Tables[TableName].NewRow();
+            DataRow dr = ds.Tables[tableName].NewRow();
             dr["Name"] = "Fred";
             dr["Number"] = "046131";
             dr["Description"] = "This is a row added by the unit test";
 
-            ds.Tables[TableName].Rows.Add(dr);
-            dr = ds.Tables[TableName].NewRow();
+            ds.Tables[tableName].Rows.Add(dr);
+            dr = ds.Tables[tableName].NewRow();
             dr["Name"] = "Jill";
             dr["Number"] = "213251";
             dr["Description"] = "This is a row added by the unit test";
 
-            ds.Tables[TableName].Rows.Add(dr);
+            ds.Tables[tableName].Rows.Add(dr);
 
-            int Result = crud.SaveData(ds, TableName);
-            Assert.AreEqual(2, Result);
+            int result = crud.SaveData(ds, tableName);
+            Assert.AreEqual(2, result);
         }
 
         [Test]
         public void fillDataSet_ReturnObject_containsTable()
         {
-            String strQuery = "SELECT * FROM [dbo].[TestTable]";
+            const string tableName = "TestTable";
+            String strQuery = String.Format("SELECT * FROM [{0}]", tableName);
             var crud = new Crud(OleDbDataConnection.GetInstance());
             var dataset = new DataSet();
             dataset = crud.FillDataSet(dataset, strQuery, "dbo.TestTable");
@@ -84,7 +84,8 @@ namespace DbDataAccessLayer_Tests
         [Test]
         public void fillDataSet_ReturnObject_notNull()
         {
-            String strQuery = "SELECT * FROM [dbo].[TestTable]";
+            const string tableName = "TestTable";
+            String strQuery = String.Format("SELECT * FROM [{0}]", tableName);
             var crud = new Crud(OleDbDataConnection.GetInstance());
             var result = new DataSet();
             result = crud.FillDataSet(result, strQuery, "dbo.TestTable");
